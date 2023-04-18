@@ -302,6 +302,56 @@ const depositRequestSchema = new mongoose.Schema({
 
 
 
+const paymentRequestSchema = new mongoose.Schema({
+  userToken: {
+    type: String,
+    required: true,
+  },
+  email1: {
+    type: String,
+    unique: false,
+
+    required: true,
+  },
+  withdrawAmount: {
+    type: Number,
+    required: true,
+  },
+  withdrawFee: {
+    type: Number,
+    required: false,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  status: {
+    type: String,
+    default: "Waiting",
+  },
+  walletTo: {
+    type: String,
+    required: true,
+  },
+  gonderildi: {
+    type: Boolean,
+    default: false,
+  },
+  txHash: {
+    type: String,
+    default: "",
+  },
+  type: {
+    type: String,
+    required: true,
+    default: "Matic",
+  },
+});
+
+
+
+
+
 const Game = mongoose.models.Game || mongoose.model("Game", GameSchema);
 const User = mongoose.models.User || mongoose.model("User", UserSchema);
 
@@ -311,6 +361,10 @@ const BetHistory = mongoose.models.BetHistory || mongoose.model("BetHistory", Be
 const Deposit = mongoose.models.Deposit || mongoose.model("Deposit", DepositSchema);
 
 const DepositRequest = mongoose.models.DepositRequest || mongoose.model("DepositRequest", depositRequestSchema);
+
+const PaymentRequest = mongoose.models.PaymentRequest || mongoose.model("PaymentRequest", paymentRequestSchema);
+
+
 
 
 
@@ -486,9 +540,13 @@ const placeBet = async (
           //socket.emit("start", user?.username);
 
 
+
 //client.js
+/*
 var io = require('socket.io-client');
 var socket = io.connect('https://vienna.herokuapp.com', {reconnect: true});
+*/
+
 
 /*
 const socketIo = io(`${SocketEnum.id}`, {
@@ -499,9 +557,12 @@ const socket = io.connect("http://127.0.0.1:30001", {path: "/socket.io", transpo
 */
 
 
+/*
 // Add a connect listener
 socket.on('connect', function (socket) {
     console.log('Connected!');
+
+    ////socket.emit('user', username);
 });
 
 socket.on('status', function (data) {
@@ -509,18 +570,15 @@ socket.on('status', function (data) {
 
   //setStatus(data);
 
-  /*
-  if (data === true) {
-      setBasePrice(currentPrice);
-  }
-  */
 
   //setStatus(true);
 });
 
+socket.emit('user', username);
+
 socket.emit('start', username);
 
-
+*/
 
 
 
@@ -661,6 +719,9 @@ login(
   "robert@gmail.com",
   "genever77"
 );
+*/
+
+/*
 
 // 2초 간격으로 메시지를 보여줌
 let timerId9 = setInterval(() => {
@@ -736,3 +797,42 @@ for (let i = 0; i < betMiktari; i++) {
 
 }
 */
+
+
+var currentPrice = 10000;
+
+setInterval(myMethod, 1000);
+
+function myMethod( ) {
+
+
+  ///console.log("check Game currentPrice========", currentPrice);
+
+
+  if (currentPrice) {
+ 
+
+    (async () => {
+
+      const paymentRequest = await PaymentRequest.find({status: 'Waiting'}).sort({ _id: 1 });
+
+
+      for (var i = 0; i < paymentRequest.length; i++) {
+
+        var request = paymentRequest[i];
+
+        console.log("request", request);
+
+        var userToken = request.userToken;
+
+  
+      }
+
+    })();
+
+
+  }
+
+
+
+}
