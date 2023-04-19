@@ -187,7 +187,7 @@ const UserSchema = new mongoose.Schema({
   },
   walletAddress: {
     type: String,
-    required: true,
+    required: false,
     default: "",
   },
   status: {
@@ -215,6 +215,10 @@ const GameSchema = new mongoose.Schema({
   },
   selectedSide: {
     type: String,
+    required: true,
+  },
+  basePrice: {
+    type: Number,
     required: true,
   },
 });
@@ -668,58 +672,63 @@ setTimeout(() => {
   );
 
 }, 6000);
+*/
 
 
-setTimeout(() => {
-    
-  
+
+
+setInterval(david, 100000);
+
+function david( ) {
+
   login(
     "david@gmail.com",
     "genever77"
   );
-  
 
-}, 5000);
+}
 
 
-setTimeout(() => {
-  
+setInterval(michael, 140000);
+
+function michael() {
   login(
     "michael@gmail.com",
     "genever77"
   );
+}
 
-}, 12000);
 
+setInterval(robert, 220000);
 
-setTimeout(() => {
-      
+function robert() {
   login(
     "robert@gmail.com",
     "genever77"
   );
+}
 
 
-}, 9000);
+setInterval(james, 200000);
 
-
-setTimeout(() => {
-      
+function james() {
   login(
     "james@gmail.com",
     "genever77"
   );
-
-}, 1000);
-*/
+}
 
 
-/*
-login(
-  "robert@gmail.com",
-  "genever77"
-);
-*/
+setInterval(margaret, 200000);
+
+function margaret() {
+  login(
+    "margaret@gmail.com",
+    "genever77"
+  );
+}
+
+
 
 /*
 
@@ -801,7 +810,7 @@ for (let i = 0; i < betMiktari; i++) {
 
 var currentPrice = 10000;
 
-setInterval(myMethod, 1000);
+/////setInterval(myMethod, 1000);
 
 function myMethod( ) {
 
@@ -834,5 +843,11 @@ function myMethod( ) {
   }
 
 
-
 }
+
+
+
+/*
+withdraw wallet for winner
+0x6827a9fa9059a77851A1A98c17f723F9E69B2d81
+*/
