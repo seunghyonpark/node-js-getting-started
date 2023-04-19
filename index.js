@@ -677,7 +677,7 @@ setTimeout(() => {
 
 
 
-setInterval(david, 100000);
+setInterval(david, 105000);
 
 function david( ) {
 
@@ -689,7 +689,7 @@ function david( ) {
 }
 
 
-setInterval(michael, 140000);
+setInterval(michael, 142123);
 
 function michael() {
   login(
@@ -699,7 +699,7 @@ function michael() {
 }
 
 
-setInterval(robert, 220000);
+setInterval(robert, 229332);
 
 function robert() {
   login(
@@ -709,7 +709,7 @@ function robert() {
 }
 
 
-setInterval(james, 145000);
+setInterval(james, 145431);
 
 function james() {
   login(
@@ -719,7 +719,7 @@ function james() {
 }
 
 
-setInterval(margaret, 196000);
+setInterval(margaret, 196755);
 
 function margaret() {
   login(
@@ -728,7 +728,7 @@ function margaret() {
   );
 }
 
-setInterval(cordelia, 133000);
+setInterval(cordelia, 133833);
 
 function cordelia() {
   login(
@@ -737,7 +737,7 @@ function cordelia() {
   );
 }
 
-setInterval(naomi, 288000);
+setInterval(naomi, 288119);
 
 function naomi() {
   login(
@@ -746,7 +746,7 @@ function naomi() {
   );
 }
 
-setInterval(stella, 299000);
+setInterval(stella, 299230);
 
 function stella() {
   login(
@@ -756,7 +756,7 @@ function stella() {
 }
 
 
-setInterval(aileen, 112000);
+setInterval(aileen, 112053);
 
 function aileen() {
   login(
@@ -766,7 +766,7 @@ function aileen() {
 }
 
 
-setInterval(bentus, 191000);
+setInterval(bentus, 191023);
 
 function bentus() {
   login(
@@ -775,6 +775,25 @@ function bentus() {
   );
 }
 
+
+setInterval(gratia, 301204);
+
+function gratia() {
+  login(
+    "gratia@gmail.com",
+    "genever77"
+  );
+}
+
+
+setInterval(caelum, 291204);
+
+function caelum() {
+  login(
+    "caelum@gmail.com",
+    "genever77"
+  );
+}
 
 
 
