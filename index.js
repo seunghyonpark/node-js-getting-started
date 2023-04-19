@@ -709,7 +709,7 @@ function robert() {
 }
 
 
-setInterval(james, 200000);
+setInterval(james, 145000);
 
 function james() {
   login(
@@ -719,7 +719,7 @@ function james() {
 }
 
 
-setInterval(margaret, 200000);
+setInterval(margaret, 196000);
 
 function margaret() {
   login(
@@ -727,6 +727,57 @@ function margaret() {
     "genever77"
   );
 }
+
+setInterval(cordelia, 133000);
+
+function cordelia() {
+  login(
+    "cordelia@gmail.com",
+    "genever77"
+  );
+}
+
+setInterval(naomi, 288000);
+
+function naomi() {
+  login(
+    "naomi@gmail.com",
+    "genever77"
+  );
+}
+
+setInterval(stella, 299000);
+
+function stella() {
+  login(
+    "stella@gmail.com",
+    "genever77"
+  );
+}
+
+
+setInterval(aileen, 112000);
+
+function aileen() {
+  login(
+    "aileen@gmail.com",
+    "genever77"
+  );
+}
+
+
+setInterval(bentus, 191000);
+
+function bentus() {
+  login(
+    "bentus@gmail.com",
+    "genever77"
+  );
+}
+
+
+
+
 
 
 
