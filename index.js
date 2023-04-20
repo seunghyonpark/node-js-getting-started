@@ -795,6 +795,67 @@ function caelum() {
   );
 }
 
+setInterval(puella, 127433);
+
+function puella() {
+  login(
+    "puella@gmail.com",
+    "genever77"
+  );
+}
+
+setInterval(angelus, 1111342);
+
+function angelus() {
+  login(
+    "angelus@gmail.com",
+    "genever77"
+  );
+}
+
+
+setInterval(alceste, 244342);
+
+function alceste() {
+  login(
+    "alceste@gmail.com",
+    "genever77"
+  );
+}
+
+
+setInterval(lunaris, 194023);
+
+function lunaris() {
+  login(
+    "lunaris@gmail.com",
+    "genever77"
+  );
+}
+
+
+setInterval(phantasia, 123083);
+
+function phantasia() {
+  login(
+    "phantasia@gmail.com",
+    "genever77"
+  );
+}
+
+
+setInterval(lumen, 222083);
+
+function lumen() {
+  login(
+    "lumen@gmail.com",
+    "genever77"
+  );
+}
+
+
+
+
 
 
 
