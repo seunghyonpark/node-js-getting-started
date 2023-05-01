@@ -194,6 +194,14 @@ const UserSchema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
+  referralCode: {
+    type: String,
+    required: false,
+  },
+  referral: {
+    type: String,
+    required: false,
+  },
 });
 
 const GameSchema = new mongoose.Schema({
@@ -208,6 +216,10 @@ const GameSchema = new mongoose.Schema({
   img: {
     type: String,
     required: true,
+  },
+  referral: {
+    type: String,
+    required: false,
   },
   betAmount: {
     type: Number,
@@ -427,6 +439,7 @@ const placeBet = async (
   userToken,
   username,
   img,
+  referral,
 
 ) => {
 
@@ -511,6 +524,7 @@ const placeBet = async (
           API_KEY: process.env.API_KEY,
           userToken: userToken,
           img: img,
+          referral: referral,
           username: username,
           betAmount: betAmount,
           selectedSide: selectedSide
@@ -649,8 +663,9 @@ const login = async (
               const userToken = data.user.user.userToken;
               const username = data.user.user.username;
               const img = data.user.user.img;
+              const referral = data.user.user.referral;
 
-              placeBet(userToken, username, img);
+              placeBet(userToken, username, img, referral);
 
 
 
