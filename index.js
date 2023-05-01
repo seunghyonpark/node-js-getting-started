@@ -667,8 +667,6 @@ const login = async (
 
               placeBet(userToken, username, img, referral);
 
-
-
           }
           
       });
